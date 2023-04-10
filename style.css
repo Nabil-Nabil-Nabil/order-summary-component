@@ -1,0 +1,170 @@
+:root {
+    /* Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+/* Global Style */
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+.flex-gorp {
+    display: flex;
+    gap: 1.1rem;
+}
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: 16px;
+    padding: 1.5rem ;
+
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: 100rem;
+    background-position: top left;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media (min-width: 400px) {
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-size: 80rem;
+        background-repeat: repeat no-repeat;
+        background-position: top left;
+    }
+}
+
+/* Card Style */
+.card {
+    max-width: 20.4375rem;
+    border-radius: 1.3rem;
+    overflow: hidden;
+
+    background-color: white;
+    box-shadow: 2px 5px 15px rgba(0, 0, 0, .1);
+}
+@media (min-width: 400px) {
+    .card {
+        max-width: 25rem;
+    }
+}
+
+/* All Contents */
+.content {
+    text-align: center;
+    padding: 2rem 1.5rem 1rem;
+
+    display: grid;
+    gap: 1.4rem;
+}
+
+/* Heade */
+.content > .header {
+    color: var(--Dark-blue);
+    font-size: 1.39rem;
+    font-weight: 900;
+} 
+
+/* Paragtaph */
+.content > .paragraph {
+    padding: 0 0.6rem;
+    color: var(--Desaturated-blue);
+
+    font-size: .9rem;
+    font-weight: 700;
+    line-height: 1.5rem;
+} 
+
+/* Music Section */
+.content > .music {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--Very-pale-blue);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+/* Music Header */
+.card .content .cach-and-header .header {
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+/* Music Cach */
+.card .content .cach-and-header .cach {
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    margin-top: .3rem;
+    color: var(--Desaturated-blue);
+}
+
+/* "Change" Linke */
+.content > .music a {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--Bright-blue);
+}
+.content > .music a:hover {
+    opacity: .8;
+    transition: .3s ease;
+}
+
+/* "Payment" Section */
+.Payment {
+    width: 100%;
+}
+
+/* All Buttons Style */
+.Payment button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    font-weight: 900;
+}
+@media (min-width: 400px) {
+    .Payment button {
+        padding: .8rem;
+    }
+}
+
+/* "Proceed To Pyment" Button */
+.Payment .Proceed {
+    background-color: var(--Bright-blue);
+    color: white;
+    border-radius: .8rem;
+    box-shadow: 0 5px 10px 0px var(--Bright-blue);
+    transition: .3s ease;
+}
+.Payment .Proceed:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+/* "Cancel Order" Button */
+.Payment .cancel {
+    color: var(--Desaturated-blue);
+    background-color: transparent;
+    margin-top: .5rem;
+    transition: .3s ease;
+}
+.Payment .cancel:hover {
+    color: var(--Dark-blue);
+    cursor: pointer;
+}
